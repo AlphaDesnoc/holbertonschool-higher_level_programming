@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-uppercase = __import__('8-uppercase').uppercase
+pow = __import__('11-pow').pow
 
-uppercase("best")
-uppercase("Best School 98 Battery street")
+print(pow(2, 2))
+print(pow(98, 2))
+print(pow(98, 0))
+print(pow(100, -2))
+print(pow(-4, 5))
