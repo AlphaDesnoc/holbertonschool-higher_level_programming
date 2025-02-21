@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""Defines a Square class with size validation, area calculation, and printing functionality."""
+"""
+Defines a Square class with size validation, area calculation,
+and printing functionality.
+"""
 
 
 class Square:
-    """Represents a square with size, area, and visual representation capabilities."""
+    """
+    Represents a square with size, area,
+    and visual representation capabilities.
+    """
 
     def __init__(self, size=0):
         """

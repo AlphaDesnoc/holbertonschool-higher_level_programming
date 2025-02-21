@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module contains the definition of a Square class with a private size attribute.
+This module contains the definition of a Square class
+with a private size attribute.
 """
 
 

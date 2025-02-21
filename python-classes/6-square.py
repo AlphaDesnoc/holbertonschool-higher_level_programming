@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-"""Defines a Square class with size, position, area, and printing functionality."""
+"""
+Defines a Square class with size, position, area, and printing functionality.
+"""
 
 
 class Square:
-    """Represents a square with size, position, and methods to calculate area and print the square."""
+    """
+    Represents a square with size, position,
+    and methods to calculate area and print the square.
+    """
 
     def __init__(self, size=0, position=(0, 0)):
         """
@@ -11,10 +16,12 @@ class Square:
 
         Args:
             size (int, optional): The size of the square. Defaults to 0.
-            position (tuple, optional): The position of the square. Defaults to (0, 0).
+            position (tuple, optional): The position of the square.
+                Defaults to (0, 0).
 
         Raises:
-            TypeError: If size is not an integer or position is not a tuple of 2 positive integers.
+            TypeError: If size is not an integer or
+                position is not a tuple of 2 positive integers.
             ValueError: If size is less than 0.
         """
         self.size = size
@@ -88,7 +95,8 @@ class Square:
         """
         Prints a visual representation of the square using the '#' character.
 
-        If size is 0, prints an empty line. The position is used to offset the square.
+        If size is 0, prints an empty line.
+        The position is used to offset the square.
         """
         if self.__size == 0:
             print()
