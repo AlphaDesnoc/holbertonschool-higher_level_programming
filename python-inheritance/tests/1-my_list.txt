@@ -54,6 +54,7 @@ NameError: name 'list_no_exist' is not defined
 
 >>> my_list = MyList()
 
+>>> my_list = MyList()
 >>> my_list += [3]
 >>> my_list.print_sorted()
 [3]
