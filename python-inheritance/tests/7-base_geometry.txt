@@ -2,7 +2,7 @@
 How to Use 7-base_geometry.py
 ===========================
 
-This module defines a base geometry class, BaseGeometry.
+This module defines a base geometry class BaseGeometry.
 
 Usage
 =====
@@ -10,14 +10,15 @@ Usage
 Importing the class from the module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Now we can create an instance of BaseGeometry:
+Now we can create a BaseGeometry instance:
     >>> bg = BaseGeometry()
 
 The class has two methods:
 
 1. area(self)
 -------------
-This method is not implemented and will raise an Exception if called:
+
+This method is not implemented and should raise an Exception:
 
     >>> bg.area()
     Traceback (most recent call last):
@@ -25,7 +26,8 @@ This method is not implemented and will raise an Exception if called:
 
 2. integer_validator(self, name, value)
 ---------------------------------------
-This method validates the input values:
+
+This method validates the input:
 
 Passing valid integers should not raise any exceptions:
     >>> bg.integer_validator("my_int", 12)
@@ -44,7 +46,7 @@ Passing non-integer types should raise a TypeError:
     Traceback (most recent call last):
     ValueError: distance must be greater than 0
 
-Passing other data types should raise a TypeError as well:
+Passing other data types should also raise a TypeError:
     >>> bg.integer_validator("average", 7.8)
     Traceback (most recent call last):
     TypeError: average must be an integer
