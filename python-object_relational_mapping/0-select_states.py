@@ -6,6 +6,7 @@ Lists all states from the database hbtn_0e_0_usa.
 import MySQLdb
 import sys
 
+
 def list_states():
     """
     Connects to a MySQL database and retrieves all states
@@ -23,6 +24,7 @@ def list_states():
 
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     list_states()
