@@ -1,30 +1,30 @@
 #!/usr/bin/python3
-"""Start link class to table in database"""
-import sys
-from model_state import Base, State
-from sqlalchemy import (create_engine)
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm.exc import NoResultFound
 
+"""script that adds the State object “Louisiana”
+to the database hbtn_0e_6_usa"""
+
+import sys
+from model_state import State
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                           .format(sys.argv[1],
-                                   sys.argv[2],
-                                   sys.argv[3]),
-                           pool_pre_ping=True)
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(username, password, database))
 
-    Base.metadata.create_all(engine)
-    Session = sessionmaker(engine)
+    Session = sessionmaker(bind=engine)
+
     session = Session()
 
-    session.add(State(name="Louisiana"))
+    new_state = State(name='Louisiana')
+
+    session.add(new_state)
+
     session.commit()
 
-    try:
-        state = session.query(State.id).filter_by(name="Louisiana").one()
-        print(state[0])
-    except NoResultFound:
-        print("Not found")
+    print(new_state.id)
 
     session.close()
