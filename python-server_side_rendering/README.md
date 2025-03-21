@@ -1,1 +1,1 @@
-Python Server Side Rendering
+exercises about ssr in python
